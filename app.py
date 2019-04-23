@@ -1,16 +1,8 @@
-import imutils
-from flask import render_template, Response, request
+from flask import render_template, Response
 from src.camera.camera_opencv import Camera
 from flask_socketio import SocketIO
 from flask import Flask
-import flask
 from src.generator.VideoGenerator import VideoGenerator
-import threading
-from threading import Thread
-import time
-import numpy as np
-import cv2
-
 
 app = Flask(__name__)
 socketio = SocketIO(app, async_mode='threading')
@@ -63,3 +55,4 @@ if __name__ == '__main__':
 '''ifconfig | grep "inet " | grep -v 127.0.0.1'''
 '''python app.py runserver --host 0.0.0.0'''
 '''  http://192.168.43.122:5000 '''
+'''http://192.168.43.122:8000/securityCamera'''
